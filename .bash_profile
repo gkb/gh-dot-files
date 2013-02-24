@@ -51,11 +51,11 @@ alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
 # For Cint
-# CINTSYSDIR=/Users/gajubhat/Source_Code/cint/bin
-# PATH=$PATH:$CINTSYSDIR
-# MANPATH=$MANPATH:$CINTSYSDIR/../doc
-# LD_LIBRARY_PATH=.:$CINTSYSDIR:$LD_LIBRARY_PATH
-# export PATH CINTSYSDIR MANPATH LD_LIBRARY_PATH
+CINTSYSDIR=/Users/gajubhat/Source_Code/cint/bin
+PATH=$PATH:$CINTSYSDIR
+MANPATH=$MANPATH:$CINTSYSDIR/../doc
+LD_LIBRARY_PATH=.:$CINTSYSDIR:$LD_LIBRARY_PATH
+export PATH CINTSYSDIR MANPATH LD_LIBRARY_PATH
 
 # Add /usr/local/sbin to PATH to stop homebrew from complaining each time
 export PATH=$PATH:/usr/local/sbin
