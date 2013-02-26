@@ -71,7 +71,7 @@ export PYTHONPATH=$PYTHONPATH:/Users/gajubhat/Source_Code/cython/
 export PATH=$PATH:/Users/gajubhat/Source_Code/cython/bin
 
 # Including libraries for java
-export CLASSPATH=$CLASSPATH:~/Source_Code/Java_Lib/algs4.jar:~/Source_Code/Java_Lib/stdlib.jar
+export CLASSPATH=$CLASSPATH:~/Source_Code/Java_Lib/algs4.jar:~/Source_Code/Java_Lib/stdlib.jar:.
 
 # Set architecture flags correctly to avoid headaches
 export ARCHFLAGS="-arch x86_64"
