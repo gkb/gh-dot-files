@@ -43,9 +43,6 @@ alias e="exit"
 alias ssh="ssh -X"
 alias ..="cd .."
 
-# Alias for wpshell
-alias wpsh="/Users/gajubhat/Source_Code/wpcom/trunk/bin/wpshell/wpshell"
-
 #creating alias for mysql
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
