@@ -61,6 +61,9 @@ export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+# Need my installs in /usr/local/bin to take precedence over ones in /usr/bin
+export PATH=/usr/local/bin/:$PATH
+
 # Set up Python nicely
 export PYTHONSTARTUP='/Users/gajubhat/.python/startup.py'
 # Include cython in the search path
