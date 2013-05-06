@@ -81,3 +81,9 @@ export ARCHFLAGS="-arch x86_64"
 
 # Set a global history file for R
 export R_HISTFILE=~/.Rhistory
+
+# Provide for easier combination of mkdir and cd
+# See
+# http://www.thegeekstuff.com/2008/10/6-awesome-linux-cd-command-hacks-productivity-tip3-for-geeks/
+# for inspiration
+function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
