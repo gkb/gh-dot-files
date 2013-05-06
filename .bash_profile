@@ -42,6 +42,12 @@ alias c="clear"
 alias e="exit"
 alias ssh="ssh -X"
 alias ..="cd .."
+# More inspired by
+# http://www.thegeekstuff.com/2008/10/6-awesome-linux-cd-command-hacks-productivity-tip3-for-geeks/
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
 
 #creating alias for mysql
 alias mysql=/usr/local/mysql/bin/mysql
