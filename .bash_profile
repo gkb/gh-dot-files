@@ -53,6 +53,9 @@ alias ..5="cd ../../../../.."
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
+# Automatically correct misspelled directory names
+shopt -s cdspell
+
 # For Cint
 CINTSYSDIR=/Users/gajubhat/Source_Code/cint/bin
 PATH=$PATH:$CINTSYSDIR
