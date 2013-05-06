@@ -85,7 +85,7 @@ export CLASSPATH=$CLASSPATH:~/Source_Code/Java_Lib/algs4.jar:~/Source_Code/Java_
 export PATH=$PATH:/usr/local/apache-ant:usr/local/maven
 
 # Temporary hack for getting classpath to work with the code in Thinking in java
-export CLASSPATH=$CLASSPATH:~/Documents/Work/Code_Pen/java/Thinking_in_Java/TIJ4-code/
+export CLASSPATH=$CLASSPATH:/usr/local/lib/jar/:~/Documents/Work/Code_Pen/java/Thinking_in_Java/TIJ4-code/
 
 # Set architecture flags correctly to avoid headaches
 export ARCHFLAGS="-arch x86_64"
