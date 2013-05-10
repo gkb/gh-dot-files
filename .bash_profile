@@ -101,7 +101,6 @@ export R_HISTFILE=~/.Rhistory
 # for inspiration
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
-# Configuring my environment for ruby
-export PATH="$PATH:$HOME/.rbenv/bin"
-# Add rbenv init to your shell to enable shims and autocompletion
-eval "$(rbenv init -)"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
