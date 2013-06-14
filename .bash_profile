@@ -49,6 +49,9 @@ alias ..3="cd ../../.."
 alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
 
+# Making info vi-like
+alias info='info --vi-keys'
+
 #creating alias for mysql
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
