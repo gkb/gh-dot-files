@@ -105,3 +105,6 @@ export R_HISTFILE=~/.Rhistory
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Get iPython and other programs to work
+export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/Current/bin
