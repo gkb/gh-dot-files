@@ -104,4 +104,4 @@ export R_HISTFILE=~/.Rhistory
 # for inspiration
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
