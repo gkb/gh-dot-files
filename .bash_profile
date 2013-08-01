@@ -4,26 +4,29 @@ export PATH
 # set the default editor
 export EDITOR=/usr/bin/vim
 
-PROMPT_COMMAND='DIR=`pwd|sed -e "s!$HOME!~!"`; if [ ${#DIR} -gt 30 ]; then CurDir=${DIR:0:12}...${DIR:${#DIR}-15}; else CurDir=$DIR; fi'
+if [ -t 0 ] # Interactive shell only commands
+then
+	PROMPT_COMMAND='DIR=`pwd|sed -e "s!$HOME!~!"`; if [ ${#DIR} -gt 30 ]; then CurDir=${DIR:0:12}...${DIR:${#DIR}-15}; else CurDir=$DIR; fi'
 
-# make bash autocomplete with up arrow
-bind '"\e[A":history-search-backward'
-bind '"\e[B":history-search-forward'
+	# make bash autocomplete with up arrow
+	bind '"\e[A":history-search-backward'
+	bind '"\e[B":history-search-forward'
 
-# make tab cycle through commands instead of listing
-bind '"\t":menu-complete'
-bind "set completion-ignore-case on"
+	# make tab cycle through commands instead of listing
+	bind '"\t":menu-complete'
+	bind "set completion-ignore-case on"
 
-# show current directory on the bash prompt
-PS1='\[\e[1;32m\]\u@\H:\[\e[m\e[1;35m\]\w\[\e[m\]$'
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${USER}@${HOSTNAME}: ${PWD}\007\]$PS1"
-    ;;
-*)
-    ;;
-esac
-export PS1
+	# show current directory on the bash prompt
+	PS1='\[\e[1;32m\]\u@\H:\[\e[m\e[1;35m\]\w\[\e[m\]$'
+	case "$TERM" in
+	xterm*|rxvt*)
+	    PS1="\[\e]0;${USER}@${HOSTNAME}: ${PWD}\007\]$PS1"
+	    ;;
+	*)
+	    ;;
+	esac
+	export PS1
+fi
 
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
