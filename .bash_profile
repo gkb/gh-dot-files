@@ -4,8 +4,8 @@ export PATH
 # set the default editor
 export EDITOR=/usr/bin/vim
 
-if [ -t 0 ] # Interactive shell only commands
-then
+case $- in
+*i*)    # interactive shell
 	PROMPT_COMMAND='DIR=`pwd|sed -e "s!$HOME!~!"`; if [ ${#DIR} -gt 30 ]; then CurDir=${DIR:0:12}...${DIR:${#DIR}-15}; else CurDir=$DIR; fi'
 
 	# make bash autocomplete with up arrow
@@ -25,8 +25,10 @@ then
 	*)
 	    ;;
 	esac
-	export PS1
-fi
+	export PS1;;
+*)
+	;;
+esac
 
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
