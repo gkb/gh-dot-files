@@ -72,6 +72,8 @@ export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # Need my installs in /usr/local/bin to take precedence over ones in /usr/bin
+# But first remove it from its current position in PATH
+PATH=${PATH/\/usr\/local\/bin:/}
 export PATH=/usr/local/bin/:$PATH
 
 # Set up Python nicely
