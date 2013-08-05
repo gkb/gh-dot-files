@@ -49,10 +49,6 @@ alias ..5="cd ../../../../.."
 # Making info vi-like
 alias info='info --vi-keys'
 
-#creating alias for mysql
-alias mysql=/usr/local/mysql/bin/mysql
-alias mysqladmin=/usr/local/mysql/bin/mysqladmin
-
 # Automatically correct misspelled directory names
 shopt -s cdspell
 
