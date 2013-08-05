@@ -56,6 +56,9 @@ alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 # Automatically correct misspelled directory names
 shopt -s cdspell
 
+# Enable extended shell globbing
+shopt -s extglob
+
 # Add /usr/local/sbin to PATH to stop homebrew from complaining each time
 export PATH=$PATH:/usr/local/sbin
 
