@@ -30,14 +30,6 @@ case $- in
 	;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ "$TERM" != "dumb" ]; then
-    #eval "`dircolors ~/.dir_colors`"
-    alias ll='ls --format=vertical --color=auto -lah'
-    alias dir='ls --color=auto --format=vertical'
-    #alias vdir='ls --color=auto --format=long'
-fi
-
 # Useful aliases
 alias ls='ls $LS_OPTIONS -hF'
 alias ll='ls $LS_OPTIONS -lhF'
