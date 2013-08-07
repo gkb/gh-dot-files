@@ -99,3 +99,6 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Get iPython and other programs to work
 export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/Current/bin
+
+# Get Racket to work
+export PATH=$PATH:/usr/local/racket
