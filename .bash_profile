@@ -1,4 +1,4 @@
-PATH=$PATH:/usr/local/mysql/bin:~/scripts:/opt/local/libexec/gnubin:/opt/local/libexec/perl5.12:/usr/texbin
+PATH=$PATH:/usr/local/mysql/bin:~/scripts:~/scripts/share:/opt/local/libexec/gnubin:/opt/local/libexec/perl5.12:/usr/texbin
 export PATH
 
 # set the default editor
