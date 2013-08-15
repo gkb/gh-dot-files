@@ -1,0 +1,20 @@
+#info
+j       next-line
+k       prev-line
+l       forward-char
+h       backward-char
+^d      scroll-forward
+^f      scroll-forward-page-only
+^u      scroll-backward
+^b      scroll-backward-page-only
+g       beginning-of-node
+G       end-of-node
+\t      select-reference-this-line
+-       history-node
+n       next-node
+p       prev-node
+u       up-node
+t       top-node
+d       dir-node
+#var
+scroll-step=1
