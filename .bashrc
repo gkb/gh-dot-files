@@ -1,12 +1,3 @@
-PATH=$PATH:/usr/local/mysql/bin:~/Scripts:/opt/local/libexec/gnubin:/opt/local/libexec/perl5.12:/usr/texbin
-export PATH
-
-# Temporary fix for executables with user-level permission
-export PATH=$PATH:$HOME/Scripts/bin
-
-# set the default editor
-export EDITOR=/usr/bin/vim
-
 case $- in
 *i*)    # interactive shell
 	PROMPT_COMMAND='DIR=`pwd|sed -e "s!$HOME!~!"`; if [ ${#DIR} -gt 30 ]; then CurDir=${DIR:0:12}...${DIR:${#DIR}-15}; else CurDir=$DIR; fi'
@@ -38,6 +29,9 @@ shopt -s cdspell
 
 # Enable extended shell globbing
 shopt -s extglob
+
+# Get piping commands to be more informative
+set -o pipefail
 
 # Provide for easier combination of mkdir and cd
 # See
