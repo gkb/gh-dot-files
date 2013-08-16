@@ -63,3 +63,6 @@ export ARCHFLAGS="-arch x86_64"
 
 # Set a global history file for R
 export R_HISTFILE=~/.Rhistory
+
+# For docbooks support-brew installed it here
+export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
