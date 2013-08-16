@@ -9,6 +9,7 @@ then
 fi
 
 if [[ -f "$SHENV" ]]
+then
         . "$SHENV" # For the shell-independent but platform independent paths
 fi
 
