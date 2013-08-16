@@ -29,7 +29,7 @@ PATH=/usr/local/bin:$PATH
 PATH=$PATH:/Users/gajubhat/Source_Code/cython/bin
 
 # Including Apache Ant & Apache Maven in the PATH variable
-export PATH=$PATH:/usr/local/apache-ant:/usr/local/maven:$(/usr/libexec/java_home)
+PATH=$PATH:/usr/local/apache-ant:/usr/local/maven:$(/usr/libexec/java_home)
 
 # All additions to the PATH variable go before this line
 export PATH
