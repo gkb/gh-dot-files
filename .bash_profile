@@ -12,7 +12,7 @@ if [[ -f "$SHENV" ]]
         . "$SHENV" # For the shell-independent but platform independent paths
 fi
 
-if [[ (-f "$RCFILE") -a ("$-" == *i*) ]]
+if [[ (-f "$RCFILE") && ("$-" == *i*) ]]
 then
         . "$RCFILE" # For all other shell configuration in interactive shells
         . "$ALIASFILE" # For aliases
