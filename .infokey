@@ -5,6 +5,8 @@ $       end-of-line
 0       beginning-of-line
 l       forward-char
 h       backward-char
+w	forward-word
+b	backward-word
 ^d      scroll-forward
 ^f      scroll-forward-page-only
 ^u      scroll-backward
