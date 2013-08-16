@@ -31,6 +31,9 @@ shopt -s cdspell
 # Enable extended shell globbing
 shopt -s extglob
 
+# Append the current command to the history file as soon as we're done
+shopt -s histappend
+
 # Get piping commands to be more informative
 set -o pipefail
 
