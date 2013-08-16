@@ -1,6 +1,8 @@
 #info
 j       next-line
 k       prev-line
+$       end-of-line
+0       beginning-of-line
 l       forward-char
 h       backward-char
 ^d      scroll-forward
