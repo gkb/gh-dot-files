@@ -29,7 +29,7 @@ PATH=/usr/local/bin:$PATH
 PATH=$PATH:/Users/gajubhat/Source_Code/cython/bin
 
 # Including Apache Ant & Apache Maven in the PATH variable
-PATH=$PATH:/usr/local/apache-ant:/usr/local/maven:$(/usr/libexec/java_home)
+# PATH=$PATH:/usr/local/apache-ant:/usr/local/maven:$(/usr/libexec/java_home)
 
 # All additions to the PATH variable go before this line
 export PATH
@@ -66,3 +66,6 @@ export R_HISTFILE=~/.Rhistory
 
 # For docbooks support-brew installed it here
 export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
+
+# Handling MIT scheme
+export MITSCHEME_LIBRARY_PATH="/Applications/MIT\:GNU\ Scheme.app/Contents/Resources"
