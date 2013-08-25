@@ -1,6 +1,7 @@
 # set the default editor
 export EDITOR=/usr/bin/vim
 
+# Set up PATH
 PATH=$PATH:/usr/local/mysql/bin:~/Scripts:/opt/local/libexec/gnubin:/opt/local/libexec/perl5.12:/usr/texbin
 
 # Temporary fix for executables with user-level permission
