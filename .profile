@@ -1,3 +1,6 @@
+# set the default editor
+export EDITOR=/usr/bin/vim
+
 PATH=$PATH:/usr/local/mysql/bin:~/Scripts:/opt/local/libexec/gnubin:/opt/local/libexec/perl5.12:/usr/texbin
 
 # Temporary fix for executables with user-level permission
@@ -33,9 +36,6 @@ PATH=$PATH:/Users/gajubhat/Source_Code/cython/bin
 
 # All additions to the PATH variable go before this line
 export PATH
-
-# set the default editor
-export EDITOR=/usr/bin/vim
 
 # Set up Python nicely
 export PYTHONSTARTUP='/Users/gajubhat/.python/startup.py'
