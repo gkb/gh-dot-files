@@ -34,6 +34,9 @@ PATH=$PATH:/Users/gajubhat/Source_Code/cython/bin
 # All additions to the PATH variable go before this line
 export PATH
 
+# set the default editor
+export EDITOR=/usr/bin/vim
+
 # Set up Python nicely
 export PYTHONSTARTUP='/Users/gajubhat/.python/startup.py'
 # Include cython in the search path
