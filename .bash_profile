@@ -1,16 +1,10 @@
 PROFILE=~/.profile
-SHENV=~/.sh_env
 RCFILE=~/.bashrc
 ALIASFILE=~/.bash_alias
 
 if [[ -f "$PROFILE" ]]
 then
         . "$PROFILE" # For the shell-independent but platform dependent paths
-fi
-
-if [[ -f "$SHENV" ]]
-then
-        . "$SHENV" # For the shell-independent but platform independent paths
 fi
 
 if [[ (-f "$RCFILE") && ("$-" == *i*) ]]
