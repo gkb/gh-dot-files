@@ -1,6 +1,10 @@
 # set the default editor
 export EDITOR=/usr/bin/vim
 
+# Colors
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export CLICOLOR=1
+
 # Set up PATH
 PATH=$PATH:/usr/local/mysql/bin:~/Scripts:/opt/local/libexec/gnubin:/opt/local/libexec/perl5.12:/usr/texbin
 
