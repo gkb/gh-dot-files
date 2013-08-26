@@ -43,13 +43,15 @@ PATH=$PATH:/Users/gajubhat/Source_Code/cython/bin
 # All additions to the PATH variable go before this line
 export PATH
 
+######
 # Set up Python nicely
+######
 export PYTHONSTARTUP='/Users/gajubhat/.python/startup.py'
 # Include cython in the search path
 export PYTHONPATH=$PYTHONPATH:/Users/gajubhat/Source_Code/cython/
 
 ######
-Setting environmental variables for Java
+# Setting environmental variables for Java
 ######
 
 # Setting JAVA_HOME
