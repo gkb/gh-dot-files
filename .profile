@@ -67,9 +67,6 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 # Temporary hack for getting classpath to work with the code in Thinking in java
 export CLASSPATH=$CLASSPATH:/usr/local/lib/jar/:~/Documents/Work/Code_Pen/java/Thinking_in_Java/TIJ4-code/
 
-# Set architecture flags correctly to avoid headaches
-export ARCHFLAGS="-arch x86_64"
-
 # Set a global history file for R
 export R_HISTFILE=~/.Rhistory
 
