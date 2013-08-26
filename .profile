@@ -1,12 +1,18 @@
 # set the default editor
 export EDITOR=/usr/bin/vim
 
+######
 # Colors
+######
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
 export LESS="--RAW-CONTROL-CHARS"
 
+######
+
+######
 # Set up PATH
+######
 PATH=$PATH:/usr/local/mysql/bin:~/Scripts:/opt/local/libexec/gnubin:/opt/local/libexec/perl5.12:/usr/texbin
 
 # Temporary fix for executables with user-level permission
@@ -42,6 +48,8 @@ PATH=$PATH:/usr/local/apache-ant:/usr/local/maven:$(/usr/libexec/java_home)
 
 # All additions to the PATH variable go before this line
 export PATH
+
+######
 
 ######
 # Set up Python nicely
