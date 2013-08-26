@@ -51,6 +51,8 @@ export PYTHONSTARTUP='/Users/gajubhat/.python/startup.py'
 export PYTHONPATH=$PYTHONPATH:/Users/gajubhat/Source_Code/cython/
 
 ######
+
+######
 # Setting environmental variables for Java
 ######
 
@@ -73,9 +75,13 @@ export R_HISTFILE=~/.Rhistory
 # For docbooks support-brew installed it here
 export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
 
+######
 # Handling MIT scheme
+######
 export MITSCHEME_LIBRARY_PATH="/Applications/MIT\:GNU\ Scheme.app/Contents/Resources"
 export MIT_SCHEME_EXE="/usr/local/bin/scheme"
+
+######
 
 # Setting the persistent folder for screen sockets
 export SCREENDIR=~/.screen
