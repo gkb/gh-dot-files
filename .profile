@@ -48,24 +48,22 @@ export PYTHONSTARTUP='/Users/gajubhat/.python/startup.py'
 # Include cython in the search path
 export PYTHONPATH=$PYTHONPATH:/Users/gajubhat/Source_Code/cython/
 
-# Including libraries for java
-# export CLASSPATH=$CLASSPATH:~/Source_Code/Java_Lib/algs4.jar:~/Source_Code/Java_Lib/stdlib.jar:.
+######
+Setting environmental variables for Java
+######
 
-# Temporary hack for getting classpath to work with the code in Thinking in java
-export CLASSPATH=$CLASSPATH:~/Documents/Work/Code_Pen/java/Thinking_in_Java/TIJ4-code/
-
-# Set up Python nicely
-export PYTHONSTARTUP='/Users/gajubhat/.python/startup.py'
-# Include cython in the search path
-export PYTHONPATH=$PYTHONPATH:/Users/gajubhat/Source_Code/cython/
-
-# Including libraries for java
-export CLASSPATH=$CLASSPATH:~/Source_Code/Java_Lib/algs4.jar:~/Source_Code/Java_Lib/stdlib.jar:.
 # Setting JAVA_HOME
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+# Setting up CLASSPATH for java
+export CLASSPATH=$CLASSPATH:/usr/local/lib/jar/
 # Temporary hack for getting classpath to work with the code in Thinking in java
-export CLASSPATH=$CLASSPATH:/usr/local/lib/jar/:~/Documents/Work/Code_Pen/java/Thinking_in_Java/TIJ4-code/
+export CLASSPATH=$CLASSPATH:~/Documents/Work/Code_Pen/java/Thinking_in_Java/TIJ4-code/
+
+# Including libraries for java
+# export CLASSPATH=$CLASSPATH:~/Source_Code/Java_Lib/algs4.jar:~/Source_Code/Java_Lib/stdlib.jar:.
+
+######
 
 # Set a global history file for R
 export R_HISTFILE=~/.Rhistory
