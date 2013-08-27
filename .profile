@@ -18,7 +18,7 @@ PATH=$PATH:/usr/local/mysql/bin:~/Scripts:/opt/local/libexec/gnubin:/opt/local/l
 # Temporary fix for executables with user-level permission
 PATH=$PATH:$HOME/Scripts/bin
 
-PATH=$PATH:~/Scripts/
+PATH=$PATH:~/Scripts
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
