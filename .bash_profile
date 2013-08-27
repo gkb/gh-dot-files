@@ -16,5 +16,8 @@ fi
 if [[ (-f "$RCFILE") && ("$-" == *i*) ]]
 then
         . "$RCFILE" # For all other shell configuration in interactive shells
-        . "$ALIASFILE" # For aliases
+        if [[ (-f "$ALIASFILE") ]]
+        then
+                . "$ALIASFILE" # For aliases
+        fi
 fi
