@@ -19,10 +19,8 @@ PATH=$PATH:/usr/local/mysql/bin
 # Add TeX related binaries to PATH
 PATH=$PATH:/usr/texbin
 
-# Temporary fix for executables with user-level permission
-PATH=$PATH:$HOME/Scripts/bin
-
-PATH=$PATH:~/Scripts
+# User level executables
+PATH=$PATH:~/.bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
