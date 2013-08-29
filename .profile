@@ -13,7 +13,11 @@ export LESS="--RAW-CONTROL-CHARS"
 ######
 # Set up PATH
 ######
-PATH=$PATH:/usr/local/mysql/bin:~/Scripts:/opt/local/libexec/gnubin:/opt/local/libexec/perl5.12:/usr/texbin
+# Add MySQL to path
+PATH=$PATH:/usr/local/mysql/bin
+
+# Add TeX related binaries to PATH
+PATH=$PATH:/usr/texbin
 
 # Temporary fix for executables with user-level permission
 PATH=$PATH:$HOME/Scripts/bin
@@ -31,9 +35,10 @@ PATH=$PATH:/usr/local/racket
 # Add /usr/local/sbin to PATH to stop homebrew from complaining each time
 PATH=$PATH:/usr/local/sbin
 
-# MacPorts Installer addition on 2012-09-27_at_01:40:19: adding an appropriate PATH variable for use with MacPorts.
+# Macports downloaded stuff should be available
+PATH=$PATH:/opt/local/libexec/gnubin
+PATH=$PATH:/opt/local/libexec/perl5.12
 PATH=$PATH:/opt/local/bin:/opt/local/sbin
-# Finished adapting your PATH environment variable for use with MacPorts.
 
 # Need my installs in /usr/local/bin to take precedence over ones in /usr/bin
 # But first remove it from its current position in PATH
