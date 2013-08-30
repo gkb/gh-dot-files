@@ -37,6 +37,10 @@ shopt -s histappend
 # Failed history expansions should be loaded into the readline buffer
 shopt -s histreedit
 
+# Load history expansion in the readline buffer before sending it to the shell
+# parser
+shopt -s histverify
+
 # Get piping commands to be more informative
 set -o pipefail
 
