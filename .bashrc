@@ -1,3 +1,22 @@
+# Automatically correct misspelled directory names
+shopt -s cdspell
+
+# Enable extended shell globbing
+shopt -s extglob
+
+# Append the current command to the history file as soon as we're done
+shopt -s histappend
+
+# Failed history expansions should be loaded into the readline buffer
+shopt -s histreedit
+
+# Load history expansion in the readline buffer before sending it to the shell
+# parser
+shopt -s histverify
+
+# Get piping commands to be more informative
+set -o pipefail
+
 case $- in
 *i*)    # interactive shell
 	PROMPT_COMMAND='DIR=`pwd|sed -e "s!$HOME!~!"`; if [ ${#DIR} -gt 30 ]; then CurDir=${DIR:0:12}...${DIR:${#DIR}-15}; else CurDir=$DIR; fi'
@@ -24,25 +43,6 @@ case $- in
 *)
 	;;
 esac
-
-# Automatically correct misspelled directory names
-shopt -s cdspell
-
-# Enable extended shell globbing
-shopt -s extglob
-
-# Append the current command to the history file as soon as we're done
-shopt -s histappend
-
-# Failed history expansions should be loaded into the readline buffer
-shopt -s histreedit
-
-# Load history expansion in the readline buffer before sending it to the shell
-# parser
-shopt -s histverify
-
-# Get piping commands to be more informative
-set -o pipefail
 
 # Provide for easier combination of mkdir and cd
 # See
