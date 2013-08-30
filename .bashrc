@@ -34,6 +34,9 @@ shopt -s extglob
 # Append the current command to the history file as soon as we're done
 shopt -s histappend
 
+# Failed history expansions should be loaded into the readline buffer
+shopt -s histreedit
+
 # Get piping commands to be more informative
 set -o pipefail
 
