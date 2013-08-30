@@ -17,8 +17,9 @@ shopt -s histverify
 # Get piping commands to be more informative
 set -o pipefail
 
-case $- in
-*i*)    # interactive shell
+if [[ "$-" == *i* ]]
+then
+        # interactive shell
 	PROMPT_COMMAND='DIR=`pwd|sed -e "s!$HOME!~!"`; if [ ${#DIR} -gt 30 ]; then CurDir=${DIR:0:12}...${DIR:${#DIR}-15}; else CurDir=$DIR; fi'
         PROMPT_COMMAND="$PROMPT_COMMAND; history -a;"
 
@@ -32,17 +33,12 @@ case $- in
 
 	# show current directory on the bash prompt
 	PS1='\[\e[1;32m\]\u@\H:\[\e[m\e[1;35m\]\w\[\e[m\]$'
-	case "$TERM" in
-	xterm*|rxvt*)
+        if [[ "$TERM" =~ xterm*|rxvt* ]]
+        then
 	    PS1="\[\e]0;${USER}@${HOSTNAME}: ${PWD}\007\]$PS1"
-	    ;;
-	*)
-	    ;;
-	esac
-	export PS1;;
-*)
-	;;
-esac
+        fi
+	export PS1
+fi
 
 # Provide for easier combination of mkdir and cd
 # See
