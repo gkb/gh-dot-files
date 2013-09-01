@@ -43,9 +43,6 @@ PATH=$PATH:/opt/local/bin:/opt/local/sbin
 PATH=${PATH/\/usr\/local\/bin:/}
 PATH=/usr/local/bin:$PATH
 
-# Include cython in PATH for Python's sake
-PATH=$PATH:/Users/gajubhat/Source_Code/cython/bin
-
 # Including Apache Ant & Apache Maven in the PATH variable
 PATH=$PATH:/usr/local/apache-ant:/usr/local/maven:$(/usr/libexec/java_home)
 
@@ -54,14 +51,7 @@ export PATH
 
 ######
 
-######
-# Set up Python nicely
-######
 export PYTHONSTARTUP='/Users/gajubhat/.python/startup.py'
-# Include cython in the search path
-export PYTHONPATH=$PYTHONPATH:/Users/gajubhat/Source_Code/cython/
-
-######
 
 ######
 # Setting environmental variables for Java
