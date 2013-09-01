@@ -51,7 +51,7 @@ export PATH
 
 ######
 
-export PYTHONSTARTUP='/Users/gajubhat/.python/startup.py'
+export PYTHONSTARTUP="$HOME/.python/startup.py"
 
 ######
 # Setting environmental variables for Java
