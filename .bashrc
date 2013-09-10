@@ -19,10 +19,6 @@ set -o pipefail
 
 if [[ "$-" == *i* ]]
 then
-        # interactive shell
-	PROMPT_COMMAND='DIR=`pwd|sed -e "s!$HOME!~!"`; if [ ${#DIR} -gt 30 ]; then CurDir=${DIR:0:12}...${DIR:${#DIR}-15}; else CurDir=$DIR; fi'
-        PROMPT_COMMAND="$PROMPT_COMMAND; history -a;"
-
 	# make bash autocomplete with up arrow
 	bind '"\e[A":history-search-backward'
 	bind '"\e[B":history-search-forward'
