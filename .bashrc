@@ -14,6 +14,11 @@ shopt -s histreedit
 # parser
 shopt -s histverify
 
+# Save each line of a multi-line bash command to history
+shopt -s cmdhist
+
+######
+
 # Get piping commands to be more informative
 set -o pipefail
 
