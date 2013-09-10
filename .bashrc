@@ -4,6 +4,15 @@ shopt -s cdspell
 # Enable extended shell globbing
 shopt -s extglob
 
+######
+# History Management
+######
+
+# Don't export history variables because the exec commands don't need them
+HISTIGNORE="pwd:history"
+HISTCONTROL=ignoreboth:erasedups
+HISTTIMEFORMAT="%F %T "
+
 # Append the current command to the history file as soon as we're done
 shopt -s histappend
 
