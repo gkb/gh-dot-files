@@ -42,7 +42,9 @@ then
 	bind "set completion-ignore-case on"
 
 	# show current directory on the bash prompt
+        PROMPT_DIRTRIM=2
 	PS1='\[\e[1;32m\]\u@\H:\[\e[m\e[1;35m\]\w\[\e[m\]$'
+
         if [[ "$TERM" =~ xterm*|rxvt* ]]
         then
 	    PS1="\[\e]0;${USER}@${HOSTNAME}: ${PWD}\007\]$PS1"
