@@ -86,3 +86,8 @@ export MIT_SCHEME_EXE="/usr/local/bin/scheme"
 
 # Setting the persistent folder for screen sockets
 export SCREENDIR=~/.screen
+
+######
+
+# Getting pkg-config to work
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
