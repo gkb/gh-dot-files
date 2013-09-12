@@ -19,7 +19,8 @@ PATH=$PATH:/usr/local/mysql/bin
 # User level executables
 PATH=$PATH:~/.bin
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Add RVM to PATH for scripting
+PATH=$HOME/.rvm/bin:$PATH
 
 # Get iPython and other programs to work
 PATH=$PATH:/Library/Frameworks/Python.framework/Versions/Current/bin
