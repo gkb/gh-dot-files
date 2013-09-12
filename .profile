@@ -16,9 +16,6 @@ export LESS="--RAW-CONTROL-CHARS"
 # Add MySQL to path
 PATH=$PATH:/usr/local/mysql/bin
 
-# Add TeX related binaries to PATH
-PATH=$PATH:/usr/texbin
-
 # User level executables
 PATH=$PATH:~/.bin
 
