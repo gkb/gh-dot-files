@@ -28,6 +28,9 @@ shopt -s cmdhist
 
 ######
 
+# Get globbing to work recursively
+shopt -s globstar
+
 # Get piping commands to be more informative
 set -o pipefail
 
