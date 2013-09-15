@@ -20,7 +20,8 @@ PATH=$PATH:/usr/local/mysql/bin
 PATH=$PATH:~/.bin
 
 # Add RVM to PATH for scripting
-PATH=$HOME/.rvm/bin:$PATH
+# Temporarily disabling it until I fix rvm.
+# PATH=$HOME/.rvm/bin:$PATH
 
 # Get iPython and other programs to work
 PATH=$PATH:/Library/Frameworks/Python.framework/Versions/Current/bin
