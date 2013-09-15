@@ -89,3 +89,8 @@ export SCREENDIR=~/.screen
 
 # Getting pkg-config to work
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+
+######
+
+# Ensuring that Homebrew always builds from source
+export HOMEBREW_BUILD_FROM_SOURCE=1
