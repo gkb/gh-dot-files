@@ -32,11 +32,6 @@ PATH=$PATH:/usr/local/racket
 # Add /usr/local/sbin to PATH to stop homebrew from complaining each time
 PATH=$PATH:/usr/local/sbin
 
-# Macports downloaded stuff should be available
-PATH=$PATH:/opt/local/libexec/gnubin
-PATH=$PATH:/opt/local/libexec/perl5.12
-PATH=$PATH:/opt/local/bin:/opt/local/sbin
-
 # Need my installs in /usr/local/bin to take precedence over ones in /usr/bin
 # But first remove it from its current position in PATH
 PATH=${PATH/\/usr\/local\/bin:/}
