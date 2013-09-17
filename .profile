@@ -40,9 +40,6 @@ PATH=/usr/local/bin:$PATH
 # Including Apache Ant & Apache Maven in the PATH variable
 PATH=$PATH:/usr/local/apache-ant:/usr/local/maven:$(/usr/libexec/java_home)
 
-# All additions to the PATH variable go before this line
-export PATH
-
 ######
 
 export PYTHONSTARTUP="$HOME/.python/startup.py"
