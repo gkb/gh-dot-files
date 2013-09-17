@@ -1,3 +1,6 @@
+# Don't clobber existing files while doing redirection
+set -o noclobber
+
 # Automatically correct misspelled directory names
 shopt -s cdspell
 
