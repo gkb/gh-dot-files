@@ -40,6 +40,13 @@ PATH=/usr/local/bin:$PATH
 # Including Apache Ant & Apache Maven in the PATH variable
 PATH=$PATH:/usr/local/apache-ant:/usr/local/maven:$(/usr/libexec/java_home)
 
+# Final clean up of the PATH variable
+# This has been tested to see that this works
+# echo "hello:world:hello:pluto" | \
+# awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS;\
+# printf "%s", $a[$1]}'
+PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) \
+        printf ORS; printf $a[$1]}')
 ######
 
 export PYTHONSTARTUP="$HOME/.python/startup.py"
