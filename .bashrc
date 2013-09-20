@@ -78,3 +78,22 @@ source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
 # Provide for tab completion in rbenv
 source ~/.rbenv/completions/rbenv.bash
+
+# Adding another function for rbenv to work smoothly
+rbenv() {
+  typeset command
+  command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval `rbenv "sh-$command" "$@"`;;
+  *)
+    command rbenv "$command" "$@";;
+  esac
+}
+
+# Setting the global variable for rbenv shell
+export RBENV_VERSION=2.1.0-dev
