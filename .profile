@@ -107,3 +107,4 @@ export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.14.001/libexec"
 export AWS_ELASTICACHE_HOME="/usr/local/Cellar/aws-elasticache/1.7.000/libexec"
 export CS_HOME="/usr/local/Cellar/aws-cloudsearch/1.0.1.4-2013.01.11"
 export EC2_AMITOOL_HOME="/usr/local/Library/LinkedKegs/ec2-ami-tools/jars"
+export EC2_URL=https://ec2.us-west-2.amazonaws.com
