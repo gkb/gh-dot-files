@@ -93,3 +93,12 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 # Ensuring that Homebrew always builds from source
 export HOMEBREW_BUILD_FROM_SOURCE=1
+
+######
+
+# Configuring Amazon Command Line Tools
+
+export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
+export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
+export AWS_CLOUDFORMATION_HOME="/usr/local/Library/LinkedKegs/aws-cfn-tools/jars"
+export AWS_CREDENTIAL_FILE="$HOME/.ec2/credentials"
