@@ -113,4 +113,4 @@ export EC2_URL=https://ec2.us-west-2.amazonaws.com
 
 # To get eclim to work
 # http://eclim.org/install.html
-export ECLIPSE_HOME="/Applications/eclipse//Eclipse.app/Contents/MacOS"
+export ECLIPSE_HOME="/Applications/eclipse"
