@@ -50,7 +50,7 @@ then
         # Construct the primary prompt
         PS1=""
         # Show the user and host
-	PS1="${PS1}\[\e[1;32m\]\u@\H:\[\e[m\]"
+	PS1="${PS1}\[\e[1;33m\]\u@\H:\[\e[m\]"
         # Show the number of currently running jobs
         PS1="${PS1}\[\e[1;37m\]Jobs-\j:\[\e[m\]"
         # Show the working directory truncated to a maximum of
