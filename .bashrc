@@ -52,7 +52,7 @@ then
         # Show the user and host
 	PS1="${PS1}\[\e[1;32m\]\u@\H:\[\e[m\]"
         # Show the number of currently running jobs
-        PS1="${PS1}\[\e[1;30m\]Jobs-\j:\[\e[m\]"
+        PS1="${PS1}\[\e[1;37m\]Jobs-\j:\[\e[m\]"
         # Show the working directory truncated to a maximum of
         # two trailing directories
         PROMPT_DIRTRIM=2
