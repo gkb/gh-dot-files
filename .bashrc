@@ -73,8 +73,10 @@ fi
 # for inspiration
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
-# Provide for tab completion in homebrew
-source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+# Provide for bash completion as installed by Homebrew
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+        . $(brew --prefix)/etc/bash_completion
+fi
 
 # Provide for tab completion in rbenv
 source ~/.rbenv/completions/rbenv.bash
