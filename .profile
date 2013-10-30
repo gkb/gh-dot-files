@@ -25,6 +25,9 @@ PATH=$PATH:/Library/Frameworks/Python.framework/Versions/Current/bin
 # Get Racket to work
 PATH=$PATH:/usr/local/racket
 
+# Get Go to work
+PATH=$PATH:/usr/local/go/bin
+
 # Add /usr/local/sbin to PATH to stop homebrew from complaining each time
 PATH=$PATH:/usr/local/sbin
 
