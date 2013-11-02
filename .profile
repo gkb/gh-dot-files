@@ -37,7 +37,7 @@ PATH=${PATH/\/usr\/local\/bin:/}
 PATH=/usr/local/bin:$PATH
 
 # Including Apache Ant & Apache Maven in the PATH variable
-PATH=$PATH:/usr/local/apache-ant:/usr/local/maven:$(/usr/libexec/java_home)
+PATH=$PATH:/usr/local/apache-ant/bin:/usr/local/maven/bin:$(/usr/libexec/java_home)
 
 # Getting rbenv to work
 PATH=~/.rbenv/shims:$PATH
