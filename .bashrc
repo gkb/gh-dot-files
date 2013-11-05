@@ -96,6 +96,3 @@ rbenv() {
     command rbenv "$command" "$@";;
   esac
 }
-
-# Setting the global variable for rbenv shell
-export RBENV_VERSION=2.1.0-dev
