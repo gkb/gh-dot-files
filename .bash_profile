@@ -1,11 +1,11 @@
-PROFILE=~/.profile
+SYS_SPECIFIC=~/.sys_specific
 RCFILE=~/.bashrc
 ALIASFILE=~/.bash_alias
 TERMCAPFILE=~/.LESS_TERMCAP
 
-if [[ -f "$PROFILE" ]]
+if [[ -f "$SYS_SPECIFIC" ]]
 then
-        . "$PROFILE" # For the shell-independent but platform dependent paths
+        . "$SYS_SPECIFIC" # For the shell-independent but platform dependent paths
 fi
 
 if [[ -f "$TERMCAPFILE" ]]
