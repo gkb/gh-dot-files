@@ -13,8 +13,10 @@ sys_specific_filename=".sys_specific"
 # Symlink the os-specific profile
 case "$(uname -s)" in
 Darwin)
-        ln -sf "$install_dir/os_specific/osx_profile" \
-                "$HOME/$sys_specific_filename"
+        if [[ -a "${install_dir}/os_specific/osx_profile" ]] ; then
+                ln -sf "${install_dir}/os_specific/osx_profile" \
+                        "${HOME}/${sys_specific_filename}";
+        fi
         ;;
 *)
         ;;
