@@ -8,15 +8,23 @@ for file in sym_links/* ; do
         ln -sf "$install_dir/${file}" $HOME/ ;
 done
 
-sys_specific_filename=".sys_specific"
+sym_link_os_specific() {
+        local sys_specific_filename=".sys_specific"
+        local os_specific_dir="${install_dir}/os_specific"
+
+        if [[ -a "${os_specific_dir}/$1" ]] ; then
+                ln -sf "${os_specific_dir}/$1" \
+                        "${HOME}/${sys_specific_filename}";
+        fi
+}
+
 # Symlink the os-specific profile
 case "$(uname -s)" in
 Darwin)
-        if [[ -a "${install_dir}/os_specific/osx_profile" ]] ; then
-                ln -sf "${install_dir}/os_specific/osx_profile" \
-                        "${HOME}/${sys_specific_filename}";
-        fi
+        sym_link_os_specific "osx_profile"
         ;;
 *)
+        # Assume that it's a unix box by default
+        sym_link_os_specific "unix_profile"
         ;;
 esac
