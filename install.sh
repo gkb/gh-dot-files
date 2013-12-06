@@ -4,7 +4,6 @@ install_dir="$HOME/.dot-file-collection"
 shopt -s dotglob
 shopt -s nullglob
 
-files=(./sym_links/*)
 for file in sym_links/* ; do
         ln -sf "$install_dir/${file}" $HOME/ ;
 done
