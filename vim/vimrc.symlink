@@ -10,7 +10,7 @@ map <C-m> :call Uncomment()<CR>
 
 " Press F4 to toggle highlighting on/off, and show current value.
 " See http://vim.wikia.com/wiki/VimTip14
-set hlsearch
+set hlsearch incsearch
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
 " Set a list of characters that I might want to make visible
