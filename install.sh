@@ -1,5 +1,8 @@
 #!/usr/local/bin/bash
 install_dir="$HOME/.dot-file-collection"
+if [[ ! -d "$install_dir" ]] ; then
+        mkdir "$install_dir";
+fi
 
 # Recognize dot files correctly
 shopt -s dotglob
