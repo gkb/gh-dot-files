@@ -1,11 +1,13 @@
 #!/usr/local/bin/bash
 install_dir="$HOME/.dot-file-collection"
+
 # Recognize dot files correctly
 shopt -s dotglob
 shopt -s nullglob
 
-for file in sym_links/* ; do
-        ln -sf "$install_dir/${file}" $HOME/ ;
+for file in $(find -H $install_dir -name '*.symlink') ; do
+        bname=$(basename $file)
+        ln -sf "$file" "$HOME/.${bname%.*}"
 done
 
 sym_link_os_specific() {
