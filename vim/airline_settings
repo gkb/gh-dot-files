@@ -1,0 +1,19 @@
+" vim: ft=vim ts=2 sts=2 sw=2 expandtab
+
+""""""""""""""""""""""""""""""
+" airline
+""""""""""""""""""""""""""""""
+set laststatus=2
+set ttimeoutlen=50
+let g:airline_powerline_fonts            = 1
+let g:airline_theme                      = 'solarized'
+let g:airline_enable_branch              = 1
+let g:airline_enable_syntastic           = 1
+let g:airline#extensions#tabline#enabled = 1
+
+set encoding=utf-8
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"

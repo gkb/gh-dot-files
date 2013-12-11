@@ -1,0 +1,142 @@
+" Source files from this directory
+let s:dot_file_dir = "/Users/gajubhat/.dot-file-collection/"
+
+" Explicitly set the Leader and set timeouts
+let mapleader = ","
+set timeout timeoutlen=1000 ttimeoutlen=100
+
+map <C-a> :call Comment()<CR>
+map <C-m> :call Uncomment()<CR>
+
+" Press F4 to toggle highlighting on/off, and show current value.
+" See http://vim.wikia.com/wiki/VimTip14
+set hlsearch
+noremap <F4> :set hlsearch! hlsearch?<CR>
+
+" Set a list of characters that I might want to make visible
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,nbsp:@
+map <Leader>l :set list!<CR>
+
+" Retain selection after indenting
+" Try to go into visual mode (v), thenselect several lines of code here and
+" then press ``>`` several times.
+vnoremap < <gv  " better indentation
+vnoremap > >gv  " better indentation
+
+" Show whitespace
+" MUST be inserted BEFORE the colorscheme command
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace /\s\+$/
+
+" Color scheme
+set t_Co=256
+set background=dark
+colorscheme solarized
+
+" Showing line numbers and length
+set number  " show line numbers
+set tw=79   " width of document (used by gd)
+set nowrap  " don't automatically wrap on load
+set fo-=t   " don't automatically wrap text when typing
+set colorcolumn=80
+highlight ColorColumn ctermbg=233
+
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-rails.git'
+Bundle 'Valloric/MatchTagAlways'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'bling/vim-airline'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-fugitive'
+Bundle 'godlygeek/tabular'
+Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/syntastic'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'sjl/vitality.vim'
+
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle "bufexplorer.zip"
+Bundle "yavdb"
+
+" local plugins
+let s:vim_plugin_dir = s:dot_file_dir . "vim/local_plugins/"
+let s:local_plugin_names = [ "VimComments", "Rename", "IndexedSearch",
+  \"ftplugin_files", "matchit", "window_swap", "syntax_files" ]
+for lp_name in s:local_plugin_names
+  execute "Bundle " . "'file://" . s:vim_plugin_dir . lp_name . "'"
+endfor
+
+" Getting vim-airline settings
+execute "source " . s:dot_file_dir . "vim/airline_settings"
+
+""""""""""""""""
+" Easy motion
+""""""""""""""""
+let g:EasyMotion_leader_key = '<Leader>'
+
+" Add Spaces inside parentheses, A8C Style
+map <Leader>o ci(<space><space><Esc>hp
+
+" Change backspace settings
+" Make it behave as you would normally expect
+set bs=2
+
+" Recognize filetypes
+execute "source " . s:dot_file_dir . "vim/ft_settings"
+
+" bind Ctrl+<movement> keys to move around the windows,
+" instead of using Ctrl+w + <movement>
+" Every unnecessary keystroke that can be saved is good for your health :)
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" Set default options for the diff windows
+set diffopt=vertical
+
+syntax on
+set autoindent
+set tabpagemax=15
+
+" I need vim shortcuts to save me time in LaTeX.
+execute "source " . s:dot_file_dir . "vim/latex_shortcuts"
+
+" Set up par options
+set formatprg=par\ -w50
+
+" Getting jedi configuration
+execute "source " . s:dot_file_dir . "vim/jedi_config"
+
+" Set up browser for eclim
+let g:EclimBrowser = "chrome"
+
+" Getting a shortcut to copy stuff into my system clipboard
+vnoremap <silent> <Leader>c y:call
+  \ system('reattach-to-user-namespace pbcopy', @")<CR>gv
+nnoremap <silent> <Leader>d :call
+  \ system('reattach-to-user-namespace pbcopy', @")<CR>
+
+noremap <silent> <leader>mw :call MarkWindowSwap()<CR>
+noremap <silent> <leader>pw :call DoWindowSwap()<CR>

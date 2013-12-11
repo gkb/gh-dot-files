@@ -1,0 +1,89 @@
+" vim: ft=vim ts=2 sts=2 sw=2 expandtab
+
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  " Enable filetype detection, indent and plugins
+  " Necessary for matchit.vim
+  filetype plugin indent on
+
+  " Adjust spaces and tabs in different file types
+  autocmd FileType xml setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Syntax of these languages is fussy over tabs Vs spaces
+  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Customisations based on house-style (arbitrary)
+  autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+
+  " Python standard
+  autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
+
+  " Spaces are good in Tex
+  autocmd FileType tex setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Space seem to be used to indent vim
+  autocmd FileType vim setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Use spaces for indentation in java files
+  autocmd FileType java setlocal ts=4 sts=4 sw=4 expandtab
+
+  " Use spaces with C files
+  " GNU libraries with tabs and spaces mixed together seem to misbehave when
+  " ts=4
+  autocmd FileType c setlocal ts=8 sts=8 sw=8 expandtab
+
+  " Maintain similar indentation with C++ files
+  autocmd FileType cpp setlocal ts=8 sts=8 sw=8 expandtab
+
+  " Use space with text files. Makes alignment much easier
+  autocmd FileType txt setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Use space with rb
+  autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Use appropriate settings with help files. Helps preserve table adjustments
+  autocmd FileType help setlocal ts=8 sts=8 sw=8 noexpandtab
+
+  autocmd FileType sh setlocal ts=8 sts=8 sw=8 expandtab
+
+  autocmd FileType sml setlocal ts=4 sts=4 sw=4 expandtab
+
+  autocmd FileType scss.css setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Load vimrc on save
+  autocmd! bufwritepost .vimrc source %
+endif
+
+" my filetype file
+if exists("did_load_filetypes")
+  finish
+endif
+
+augroup filetypedetect
+  " Setting filetype for R
+  au! BufNewFile,BufRead *.R,*.Rout,*.r,*.Rhistory,*.Rt,*.Rout.save,*.Rout.fail setf r
+
+  " Setting filetype for Javascript
+  au! BufNewFile,BufRead *.js,*.json,*.gs setf javascript
+
+  " Setting filetype for .txt
+  au! BufNewFile,BufRead *.txt setf txt
+
+  " Setting filetype for tex
+  au! BufNewFile,BufRead *.tex setf tex
+
+  " Setting filetype for plists
+  au! BufNewFile,BufRead *.plist setf plist
+  "
+  " Treat .rss files as XML
+  au! BufNewFile,BufRead *.rss setf xml
+
+  " Recognize tmux conf files
+  au! BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
+
+  " Setting filetype for json
+  au! BufRead,BufNewFile *.json setf json
+augroup END
