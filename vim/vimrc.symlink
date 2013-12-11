@@ -1,5 +1,5 @@
 " Source files from this directory
-let s:dot_file_dir = "/Users/gajubhat/.dot-file-collection/"
+let s:dot_file_dir = $HOME . "/.dot-file-collection/"
 
 " Explicitly set the Leader and set timeouts
 let mapleader = ","
