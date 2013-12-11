@@ -1,4 +1,6 @@
 #!/usr/local/bin/bash
+[[ ! -z "$DEBUG" ]] && set -x
+
 VIM_HOME="$HOME/.vim"
 dot_file_dir="$HOME/.dot-file-collection"
 

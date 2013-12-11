@@ -1,4 +1,6 @@
 #!/usr/local/bin/bash
+[[ ! -z "$DEBUG" ]] && set -x
+
 install_dir="$HOME/.dot-file-collection"
 if [[ ! -d "$install_dir" ]] ; then
         mkdir "$install_dir";
