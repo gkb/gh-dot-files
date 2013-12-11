@@ -21,8 +21,6 @@ if [[ ! -d "${vundle_install_dir}/vundle" ]]; then
                 "${vundle_install_dir}/vundle";
 fi
 
-vim +BundleInstall +qall &>/dev/null || echo "Vundle set up failed!"
-
 # Copy color schemes
 color_install_dir="$VIM_HOME"
 color_source_dir="$dot_file_dir/vim/colors"
@@ -32,3 +30,5 @@ cp -r "$color_source_dir" "$color_install_dir"
 # Copy drop-in functionality
 drop_in_dir="$dot_file_dir/vim/drop_in"
 cp "${drop_in_dir}"/* "$VIM_HOME"
+
+vim +BundleInstall +qall &>/dev/null || echo "Vundle set up failed!"
