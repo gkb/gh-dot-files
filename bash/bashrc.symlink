@@ -74,11 +74,6 @@ fi
 # for inspiration
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
-# Provide for bash completion as installed by Homebrew
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
 install_dir="$HOME/.dot-file-collection"
 for file in $(find $install_dir \( -name '*completion*.sh' -or \
   -name '*source*.sh' \) ) ; do
