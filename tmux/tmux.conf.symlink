@@ -1,0 +1,164 @@
+# Free the original Ctrl-b prefix keybinding
+# START:unbind
+unbind C-b
+# END:unbind
+
+# Setting the prefix from C-b to C-o
+# START:prefix
+set -g prefix C-o
+bind C-o send-prefix
+# END:prefix
+
+# Setting the delay between prefix and command
+# START:delay
+set -sg escape-time 1
+# END:delay
+
+# splitting panes
+# START:panesplit
+bind | split-window -h
+bind - split-window -v
+unbind '%'
+unbind '"'
+# END:panesplit
+
+# moving between panes
+# START:paneselect
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+# END:paneselect
+
+# Quick window selection
+# START:windowtoggle
+bind -r C-a select-window -t :-
+bind -r C-g select-window -t :+
+# END:windowtoggle
+
+# Change panes by tabbing
+unbind o
+bind -r Tab select-pane -t :.+
+# bind -r S-Tab select-pane -t :.-
+
+# Pane resizing
+# START:paneresize
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+# END:paneresize
+# mouse support - set to on if you want to use the mouse
+# START:mouse
+setw -g mode-mouse off
+# END:mouse
+set -g mouse-select-pane off
+set -g mouse-resize-pane off
+set -g mouse-select-window off
+
+# Set the default terminal mode to 256color mode
+# START:termcolor
+set -g default-terminal "screen-256color"
+# END:termcolor
+
+# set the status line's colors
+# START:statuscolor
+set -g status-fg white
+set -g status-bg black
+# END:statuscolor
+
+# set the color of the window list
+# START:windowstatuscolor
+setw -g window-status-fg cyan
+setw -g window-status-bg default
+setw -g window-status-attr dim
+# END:windowstatuscolor
+
+# set colors for the active window
+# START:activewindowstatuscolor
+setw -g window-status-current-fg white
+setw -g window-status-current-bg red
+setw -g window-status-current-attr bright
+# END:activewindowstatuscolor
+
+# pane colors
+# START:panecolors
+set -g pane-border-fg green
+set -g pane-border-bg black
+set -g pane-active-border-fg white
+set -g pane-active-border-bg yellow
+# END:panecolors
+
+# Command / message line
+# START:cmdlinecolors
+set -g message-fg white
+set -g message-bg black
+set -g message-attr bright
+# END:cmdlinecolors
+
+# Status line left side
+# START:statusleft
+set -g status-left-length 40
+set -g status-left "#[fg=green]Session: #S #[fg=yellow]Win: #I #[fg=cyan]Pane: #P"
+# END:statusleft
+
+#START:utf8
+set -g status-utf8 on
+#END:utf8
+
+# Status line right side
+# 15% | 28 Nov 18:15
+# START: statusright
+set -g status-right "#[fg=cyan]%d %b %R"
+# END:statusright
+
+# Update the status bar every sixty seconds
+# START:updateinterval
+set -g status-interval 60
+# END:updateinterval
+
+# Center the window list
+# START:centerwindowlist
+set -g status-justify centre
+# END:centerwindowlist
+
+# enable activity alerts
+#START:activity
+setw -g monitor-activity on
+set -g visual-activity on
+#END:activity
+
+# enable vi keys.
+# START:vikeys
+setw -g mode-keys vi
+# END:vikeys
+
+# http://superuser.com/questions/479600/how-can-i-prevent-tmux-exiting-with-ctrl-d
+set-environment -g 'IGNOREEOF' 10
+
+# Vi-like bindings for copy and paste
+unbind [
+bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind -t vi-copy 'v' begin-selection
+bind -t vi-copy 'y' copy-selection
+
+# Patch to get pbcopy to work on the Mac
+bind C-c run "tmux-osdep copy"
+bind C-v run "tmux-osdep paste"
+
+# Log output to a text file on demand
+# START:pipe-pane
+bind P pipe-pane -o "cat >>~/#W.log" \; display "Toggled logging to ~/#W.log"
+# END:pipe-pane
+
+# Bring a pane into focus in a temporary window where it is the solitary pane
+unbind C-p
+bind C-p new-window -d -n tmp \; swap-pane -s tmp.0 \; select-window -t tmp
+
+# Return the window in focus back to the window from which we brought it
+unbind C-n
+bind C-n last-window \; swap-pane -s tmp.0 \; kill-window -t tmp
+
+set-option -g default-command 'tmux-osdep run-shell'

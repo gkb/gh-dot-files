@@ -30,3 +30,19 @@ Darwin)
         sym_link_os_specific "unix_profile"
         ;;
 esac
+
+# Run all install files in sub-directories
+# Exclude current file although it's named install.sh as well
+for file in $(find -H $install_dir -mindepth 2 -name 'install.sh') ; do
+        bash "$file";
+done
+
+bin_files=(**/bin/*)
+if [[ ! -d "$HOME/.bin" ]]; then
+        mkdir "$HOME/.bin";
+fi
+for file in "${bin_files[@]}"; do
+        if [[ -f "$file" ]]; then
+                cp "$file" "$HOME/.bin";
+        fi;
+done
