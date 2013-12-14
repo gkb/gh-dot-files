@@ -35,3 +35,5 @@
 	default = current
 [web]
 	browser = chrome
+[merge]
+	conflictstyle = diff3
