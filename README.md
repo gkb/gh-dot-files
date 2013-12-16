@@ -8,3 +8,8 @@ from some of the existing dot-file frameworks on github.
 
 Just run the `install.sh` script and everything will be taken care of. Back up
 your existing dot files while you're trying this out.
+
+## License
+
+Code is under the [MIT
+license](https://github.com/gkb/gh-dot-files/blob/master/License.md).
