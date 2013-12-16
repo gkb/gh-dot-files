@@ -17,7 +17,7 @@ HISTIGNORE="pwd:history"
 HISTCONTROL=ignoreboth:erasedups
 HISTTIMEFORMAT="%F %T "
 
-# Append the current command to the history file as soon as we're done
+# Append to history file when the current session is done. Don't overwrite it.
 shopt -s histappend
 
 # Failed history expansions should be loaded into the readline buffer
