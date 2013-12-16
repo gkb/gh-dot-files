@@ -75,7 +75,7 @@ fi
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 install_dir="$HOME/.dot-file-collection"
-for file in $(find -H $install_dir \( -name '*completion*.sh' -or \
+for file in $(find -H $install_dir \( -name '*completion*.*sh' -or \
   -name '*source*.sh' \) ) ; do
   source $file;
 done
