@@ -69,7 +69,7 @@ then
   PS1="${PS1}$(__git_ps1 ' (%s)')"
   # Show the working directory truncated to a maximum of
   # two trailing directories
-  PROMPT_DIRTRIM=2
+  PROMPT_DIRTRIM=1
   PS1="${PS1}\[\e[1;35m\]\w\[\e[m\]"
   # Add the $ symbol
   PS1="${PS1}$"
