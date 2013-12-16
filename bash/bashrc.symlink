@@ -38,6 +38,17 @@ shopt -s globstar
 # Get piping commands to be more informative
 set -o pipefail
 
+# Sourcing completions, utilities and prompt-related scripts
+install_dir="$HOME/.dot-file-collection"
+for file in $(find -H $install_dir \(\
+  -name '*completion*.*sh' -or \
+  -name '*source*.sh' -or \
+  -name '*prompt*.*sh' \
+\) ) ; do
+  source $file;
+done
+unset install_dir
+
 if [[ "$-" == *i* ]]
 then
   # make bash autocomplete with up arrow
@@ -73,13 +84,3 @@ fi
 # http://www.thegeekstuff.com/2008/10/6-awesome-linux-cd-command-hacks-productivity-tip3-for-geeks/
 # for inspiration
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
-
-install_dir="$HOME/.dot-file-collection"
-for file in $(find -H $install_dir \(\
-  -name '*completion*.*sh' -or \
-  -name '*source*.sh' -or \
-  -name '*prompt*.*sh' \
-\) ) ; do
-  source $file;
-done
-unset install_dir
