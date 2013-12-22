@@ -72,6 +72,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'sjl/vitality.vim'
+Bundle 'derekwyatt/vim-scala'
 
 " vim-scripts repos
 Bundle 'L9'
