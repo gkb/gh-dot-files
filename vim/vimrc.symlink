@@ -143,5 +143,9 @@ nnoremap <silent> <Leader>d :call
 noremap <silent> <leader>mw :call MarkWindowSwap()<CR>
 noremap <silent> <leader>pw :call DoWindowSwap()<CR>
 
+" Let ctags look up recursively in parent directories
+" See http://leonard.io/blog/2013/04/editing-scala-with-vim/ for inspiration
+set tags=tags;/
+
 " Scala related configuration
 let g:scala_sort_across_groups=1
