@@ -142,3 +142,6 @@ nnoremap <silent> <Leader>d :call
 
 noremap <silent> <leader>mw :call MarkWindowSwap()<CR>
 noremap <silent> <leader>pw :call DoWindowSwap()<CR>
+
+" Scala related configuration
+let g:scala_sort_across_groups=1
