@@ -43,6 +43,8 @@ PATH=$PATH:/usr/local/apache-ant/bin:/usr/local/maven/bin:$(/usr/libexec/java_ho
 # Getting rbenv to work
 PATH=~/.rbenv/shims:$PATH
 
+# Get cabal local installations in the PATH variable
+PATH=$PATH:~/.cabal/bin
 # Final clean up of the PATH variable
 # This has been tested to see that this works
 # echo "hello:world:hello:pluto" | \
