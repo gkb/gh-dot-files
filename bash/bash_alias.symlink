@@ -14,5 +14,6 @@ alias ..3="cd ../../.."
 alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
 
-# Alias for elegant rlwrap-based readline in scala
+# Aliases for using rlwrap
 alias scala="rlwrap scala -Xnojline"
+alias jdb="rlwrap jdb"
