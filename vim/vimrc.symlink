@@ -78,9 +78,9 @@ Bundle 'ktvoelker/sbt-vim'
 
 " vim-scripts repos
 Bundle 'L9'
-Bundle 'FuzzyFinder'
 Bundle "bufexplorer.zip"
 Bundle "yavdb"
+Bundle "Command-T"
 
 " local plugins
 let s:vim_plugin_dir = s:dot_file_dir . "vim/local_plugins/"
@@ -96,7 +96,7 @@ execute "source " . s:dot_file_dir . "vim/airline_settings"
 """"""""""""""""
 " Easy motion
 """"""""""""""""
-let g:EasyMotion_leader_key = '<Leader>'
+let g:EasyMotion_leader_key = '<Leader>m'
 
 " Add Spaces inside parentheses, A8C Style
 map <Leader>o ci(<space><space><Esc>hp
