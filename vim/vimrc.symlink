@@ -83,9 +83,6 @@ Bundle "bufexplorer.zip"
 Bundle "yavdb"
 Bundle "Command-T"
 
-" Time tracking
-Bundle 'wakatime/vim-wakatime'
-
 " local plugins
 let s:vim_plugin_dir = s:dot_file_dir . "vim/local_plugins/"
 let s:local_plugin_names = [ "VimComments", "Rename", "IndexedSearch",
