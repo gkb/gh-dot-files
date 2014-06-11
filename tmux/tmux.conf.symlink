@@ -39,7 +39,7 @@ bind -r C-g select-window -t :+
 # Change panes by tabbing
 unbind o
 bind -r Tab select-pane -t :.+
-# bind -r S-Tab select-pane -t :.-
+bind -r BTab select-pane -t :.-
 
 # Pane resizing
 # START:paneresize
