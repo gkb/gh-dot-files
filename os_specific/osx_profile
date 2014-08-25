@@ -45,6 +45,10 @@ PATH=~/.rbenv/shims:$PATH
 
 # Get cabal local installations in the PATH variable
 PATH=$PATH:~/.cabal/bin
+
+# Get the Android platform tools in the PATH variable
+PATH=$PATH:/usr/local/android-sdk/platform-tools
+
 # Final clean up of the PATH variable
 # This has been tested to see that this works
 # echo "hello:world:hello:pluto" | \
