@@ -10,12 +10,16 @@ export CLICOLOR=1
 export LESS="-XR"
 
 ######
-# Ruby
+# Set up PATH
 ######
 # Getting rbenv command line to work
 PATH="$HOME/.rbenv/bin:$PATH"
+
 # Getting rbenv shims to work
 PATH=~/.rbenv/shims:$PATH
+
+# User level executables
+PATH=$PATH:~/.bin
 
 ######
 # Java
