@@ -50,6 +50,7 @@ Linux|*BSD|SunOS)
                 ;;
         *)
                 die 'unknown command: must be copy or paste'
+                ;;
         esac
         ;;
 *)
