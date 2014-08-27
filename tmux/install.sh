@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/bash
 [[ ! -z "$DEBUG" ]] && set -x
 
 file_dir=${0%/*}

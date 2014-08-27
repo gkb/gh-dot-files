@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/bash
 [[ ! -z "$DEBUG" ]] && set -x
 
 install_dir="$HOME/.dot-file-collection"
