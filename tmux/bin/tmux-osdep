@@ -32,7 +32,7 @@ Darwin)
 		tmux paste-buffer
                 ;;
         *)
-                die 'unknown command: must be copy or paste'
+                die 'unknown command: must be copy, paste or run-shell'
                 ;;
         esac
         ;;
@@ -49,7 +49,7 @@ Linux|*BSD|SunOS)
                 tmux set-buffer "$(xclip -o -sel clipboard)"; tmux paste-buffer
                 ;;
         *)
-                die 'unknown command: must be copy or paste'
+                die 'unknown command: must be copy, paste or run-shell'
                 ;;
         esac
         ;;
