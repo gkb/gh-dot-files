@@ -40,7 +40,7 @@ Linux|*BSD|SunOS)
         # Check for DISPLAY and xsel/xclip, and use them (or whatever is appropriate).
         case "$1" in
         run-shell)
-                exec bash -l
+                exec /bin/bash -l
                 ;;
         copy)
                 tmux save-buffer - | xclip -i -sel clipboard
