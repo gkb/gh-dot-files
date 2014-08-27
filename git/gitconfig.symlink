@@ -2,7 +2,7 @@
 	name = branrich
 	email = richbran08@gmail.com
 [credential]
-	helper = osxkeychain
+	helper = store
 [init]
 	templatedir = ~/.git_template
 [alias]
