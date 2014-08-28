@@ -8,6 +8,7 @@ export EDITOR=/usr/local/bin/vim
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
 export LESS="-XR"
+export LS_OPTIONS="--color=auto"
 
 ######
 # Set up PATH
