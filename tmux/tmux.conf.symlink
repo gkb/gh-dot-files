@@ -14,10 +14,13 @@ bind C-o send-prefix
 set -sg escape-time 1
 # END:delay
 
+# Open new windows in current directory
+bind c new-window -c "#{pane_current_path}"
+
 # splitting panes
 # START:panesplit
-bind | split-window -h
-bind - split-window -v
+bind | split-window -h -c '#{pane_current_path}'
+bind - split-window -v -c '#{pane_current_path}'
 unbind '%'
 unbind '"'
 # END:panesplit
