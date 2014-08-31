@@ -1,10 +1,22 @@
 #!/bin/bash
+function die {
+        echo "$@" 1>&2 ; exit 1;
+}
+
+function abort_if_file_exists_not_dir {
+        if [[ "$#" != 1 ]]; then
+                die "Invalid number of arguments supplied";
+        fi
+        if [[ ( -a "$1" ) && ( ! -d "$1" ) ]]; then
+                die "A file by the name of $1 exists and is not a directory";
+        fi
+}
+
 [[ ! -z "$DEBUG" ]] && set -x
 
 install_dir="$HOME/.dot-file-collection"
-if [[ ! -d "$install_dir" ]] ; then
-        mkdir "$install_dir";
-fi
+abort_if_file_exists_not_dir "$install_dir"
+mkdir -p "$install_dir";
 
 # Recognize dot files correctly
 shopt -s dotglob
@@ -43,9 +55,9 @@ for file in $(find -H $install_dir -mindepth 2 -name 'install.sh') ; do
 done
 
 bin_files=(**/bin/*)
-if [[ ! -d "$HOME/.bin" ]]; then
-        mkdir "$HOME/.bin";
-fi
+bin_dir="$HOME/.bin"
+abort_if_file_exists_not_dir "$bin_dir"
+mkdir -p "$bin_dir";
 for file in "${bin_files[@]}"; do
         if [[ -f "$file" ]]; then
                 cp "$file" "$HOME/.bin";

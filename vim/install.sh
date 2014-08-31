@@ -1,19 +1,26 @@
 #!/bin/bash
 [[ ! -z "$DEBUG" ]] && set -x
 
-VIM_HOME="$HOME/.vim"
-dot_file_dir="$HOME/.dot-file-collection"
+function die {
+        echo "$@" 1>&2 ; exit 1;
+}
 
-# Helper function
-mkdir_not_exist() {
-        if [[ ! -d "$1" ]]; then
-                mkdir -p "$1";
+function abort_if_file_exists_not_dir {
+        if [[ "$#" != 1 ]]; then
+                die "Invalid number of arguments supplied";
+        fi
+        if [[ ( -a "$1" ) && ( ! -d "$1" ) ]]; then
+                die "A file by the name of $1 exists and is not a directory";
         fi
 }
 
+VIM_HOME="$HOME/.vim"
+dot_file_dir="$HOME/.dot-file-collection"
+
 # Sets up Vundle
 vundle_install_dir="$HOME/.vim/bundle"
-mkdir_not_exist "$vundle_install_dir"
+abort_if_file_exists_not_dir "$vundle_install_dir"
+mkdir -p "$vundle_install_dir"
 
 # Don't overwrite an existing checkout of Vundle
 if [[ ! -d "${vundle_install_dir}/vundle" ]]; then
@@ -24,7 +31,8 @@ fi
 # Copy color schemes
 color_install_dir="$VIM_HOME"
 color_source_dir="$dot_file_dir/vim/colors"
-mkdir_not_exist "$color_install_dir"
+abort_if_file_exists_not_dir "$color_install_dir"
+mkdir -p "$color_install_dir"
 cp -r "$color_source_dir" "$color_install_dir"
 
 # Copy drop-in functionality
