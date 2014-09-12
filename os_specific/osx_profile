@@ -74,6 +74,8 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Setting up CLASSPATH for java
 export CLASSPATH=$CLASSPATH:/usr/local/lib/jar/
+CLASSPATH=$(echo "$CLASSPATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) \
+        printf ORS; printf $a[$1]}')
 
 ######
 
