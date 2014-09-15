@@ -68,12 +68,11 @@ function run_install_scripts {
 
 # Install all bin files in $bin_dir
 function install_bin_files {
-        bin_files=(**/bin/*)
         bin_dir="$HOME/.bin"
         abort_if_file_exists_not_dir "$bin_dir"
         mkdir -p "$bin_dir";
         # Use the -H option in `find` to follow the symlink that is $install_dir
-        for file in "${bin_files[@]}"; do
+        for file in $(find -H "$install_dir" -path '*bin/*'); do
                 if [[ -f "$file" ]]; then
                         cp "$file" "$HOME/.bin";
                 fi;
