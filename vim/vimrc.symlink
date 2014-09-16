@@ -138,9 +138,9 @@ let g:EclimBrowser = "chrome"
 
 " Getting a shortcut to copy stuff into my system clipboard
 vnoremap <silent> <Leader>c y:call
-  \ system('reattach-to-user-namespace pbcopy', @")<CR>gv
+  \ system('system_specific_fun copy', @")<CR>gv
 nnoremap <silent> <Leader>d :call
-  \ system('reattach-to-user-namespace pbcopy', @")<CR>
+  \ system('system_specific_fun copy', @")<CR>
 
 noremap <silent> <leader>mw :call MarkWindowSwap()<CR>
 noremap <silent> <leader>pw :call DoWindowSwap()<CR>
