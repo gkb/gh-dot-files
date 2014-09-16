@@ -78,3 +78,17 @@ function install_bin_files {
                 fi;
         done
 }
+
+function init {
+        configure_debug
+
+        set_bash_options
+
+        #This line is suspect
+        create_install_dir
+        create_symlinks
+
+        sym_link_os_specific
+        run_install_scripts
+        install_bin_files
+}
