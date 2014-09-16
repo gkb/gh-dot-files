@@ -146,6 +146,8 @@ unbind p
 bind p paste-buffer
 bind -t vi-copy 'v' begin-selection
 bind -t vi-copy 'y' copy-selection
+# Bind rectangular toggle to different key
+bind -t vi-copy 'V' rectangle-toggle
 
 # Patch to get pbcopy to work on the Mac
 bind C-c run "tmux-osdep copy"
