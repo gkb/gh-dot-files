@@ -74,6 +74,9 @@ export CLASSPATH=$CLASSPATH:/usr/local/lib/jar/
 CLASSPATH=$(echo "$CLASSPATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) \
         printf ORS; printf $a[$1]}')
 
+# Setting GROOVY_HOME
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
 ######
 
 # Set a global history file for R
