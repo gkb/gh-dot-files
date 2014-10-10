@@ -120,10 +120,12 @@ export EC2_AMITOOL_HOME="/usr/local/Cellar/ec2-ami-tools/1.5.2/libexec"
 export AWS_CLOUDWATCH_HOME="/usr/local/Cellar/cloud-watch/1.0.20.0/libexec"
 export SERVICE_HOME="$AWS_CLOUDWATCH_HOME"
 export EC2_URL="https://ec2.us-west-2.amazonaws.com"
-export AWS_ACCESS_KEY="$(gsed -r -e '1s/^[^=]+=(.+)$/\1/p' -n \
-~/.aws/credentials)"
-export AWS_SECRET_KEY="$(gsed -r -e '2s/^[^=]+=(.+)$/\1/p' -n \
-~/.aws/credentials)"
+if [[ -d "$HOME/.aws" ]]; then
+        export AWS_ACCESS_KEY="$(gsed -r -e '1s/^[^=]+=(.+)$/\1/p' -n \
+                ~/.aws/credentials)"
+        export AWS_SECRET_KEY="$(gsed -r -e '2s/^[^=]+=(.+)$/\1/p' -n \
+                ~/.aws/credentials)";
+fi
 
 ######
 
