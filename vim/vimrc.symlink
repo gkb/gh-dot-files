@@ -76,6 +76,10 @@ Plugin 'sjl/vitality.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'ktvoelker/sbt-vim'
 Plugin 'tfnico/vim-gradle'
+Plugin 'henrik/vim-indexed-search'
+Plugin 'danro/rename.vim'
+Plugin 'wesQ3/vim-windowswap'
+Plugin 'h13ronim/vim-comments'
 
 " vim-scripts repos
 Plugin 'L9'
@@ -85,8 +89,7 @@ Plugin 'Command-T'
 
 " local plugins
 let s:vim_plugin_dir = s:dot_file_dir . "vim/local_plugins/"
-let s:local_plugin_names = [ "VimComments", "Rename", "IndexedSearch",
-  \"ftplugin_files", "matchit", "window_swap", "syntax_files" ]
+let s:local_plugin_names = [ "ftplugin_files", "syntax_files" ]
 for lp_name in s:local_plugin_names
   execute "Plugin " . "'file://" . s:vim_plugin_dir . lp_name . "'"
 endfor
