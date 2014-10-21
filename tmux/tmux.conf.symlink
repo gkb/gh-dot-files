@@ -167,3 +167,10 @@ unbind C-n
 bind C-n last-window \; swap-pane -s tmp.0 \; kill-window -t tmp
 
 set-option -g default-command 'tmux-osdep run-shell'
+
+set -g @tpm_plugins "           \
+  tmux-plugins/tpm              \
+  tmux-plugins/tmux-resurrect   \
+"
+
+run-shell ~/.tmux/plugins/tpm/tpm
