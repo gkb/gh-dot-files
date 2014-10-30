@@ -81,16 +81,12 @@ Plugin 'tpope/vim-commentary'
 
 " vim-scripts repos
 Plugin 'L9'
-Plugin 'bufexplorer.zip'
 Plugin 'yavdb'
 Plugin 'Command-T'
 
-" local plugins
-let s:vim_plugin_dir = s:dot_file_dir . "vim/local_plugins/"
-let s:local_plugin_names = [ "ftplugin_files", "syntax_files" ]
-for lp_name in s:local_plugin_names
-  execute "Plugin " . "'file://" . s:vim_plugin_dir . lp_name . "'"
-endfor
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " Getting vim-airline settings
 execute "source " . s:dot_file_dir . "vim/airline_settings"
