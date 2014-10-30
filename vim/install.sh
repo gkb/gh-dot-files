@@ -23,9 +23,9 @@ abort_if_file_exists_not_dir "$vundle_install_dir"
 mkdir -p "$vundle_install_dir"
 
 # Don't overwrite an existing checkout of Vundle
-if [[ ! -d "${vundle_install_dir}/vundle" ]]; then
-        git clone https://github.com/gmarik/vundle.git \
-                "${vundle_install_dir}/vundle";
+if [[ ! -d "${vundle_install_dir}/Vundle.vim" ]]; then
+        git clone https://github.com/gmarik/Vundle.vim.git \
+                "${vundle_install_dir}/Vundle.vim";
 fi
 
 # Copy color schemes
