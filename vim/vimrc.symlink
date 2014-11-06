@@ -78,6 +78,7 @@ Plugin 'danro/rename.vim'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'h13ronim/vim-comments'
 Plugin 'tpope/vim-commentary'
+Plugin 'mileszs/ack.vim'
 
 " vim-scripts repos
 Plugin 'L9'
