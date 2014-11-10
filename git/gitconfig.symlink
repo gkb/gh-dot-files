@@ -18,6 +18,8 @@
 	current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
 	# Usage: git track origin/feature-123-login-form
 	track = checkout -t
+	# Group grep output
+	g = "grep --break --heading --line-number"
 [apply]
 	whitespace = warn
 [color]
@@ -37,3 +39,6 @@
 [merge]
 	conflictstyle = diff3
 	tool = vimdiff
+[grep]
+	extendRegexp = true
+	lineNumber = true
