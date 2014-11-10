@@ -36,7 +36,7 @@ function maybe_symlink_to_install_dir {
                 "${BASH_SOURCE[${bash_source_length} - 1]}" )" && pwd )"
         abort_if_install_dir_path_invalid "$install_dir" "$cur_dir"
         if [[ "$cur_dir" != "$install_dir" ]]; then
-                ln -sfh "$cur_dir" "$install_dir";
+                ln -sfn "$cur_dir" "$install_dir";
         fi
 }
 
