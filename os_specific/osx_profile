@@ -46,6 +46,10 @@ PATH=$PATH:~/.cabal/bin
 # Get the Android platform tools in the PATH variable
 PATH=$PATH:/usr/local/android-sdk/platform-tools
 
+# Get the GNU tools installed by Homebrew in preference to the standard BSD
+# tools
+PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
+
 # Final clean up of the PATH variable
 # This has been tested to see that this works
 # echo "hello:world:hello:pluto" | \
