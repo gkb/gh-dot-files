@@ -1,6 +1,5 @@
-[user]
-	name = branrich
-	email = richbran08@gmail.com
+[include]
+	path = ~/.dot-file-collection/git/user-config
 [credential]
 	helper = store
 [init]

@@ -11,14 +11,33 @@ function abort_if_file_exists_not_dir {
         fi
 }
 
+function abort_if_install_dir_path_invalid {
+        if [[ "$#" != 2 ]]; then
+                die "Invalid number of arguments supplied";
+        fi
+        install_dir="$1"
+        cur_dir="$2"
+        if [[ ( -a "$install_dir" ) && ( ! -h "$install_dir" ) && \
+                ( "$cur_dir" != "$install_dir" ) ]]; then
+                die "The install directory '$HOME/.dot-file-collection'" \
+                        "already exists and is neither a symlink nor equal" \
+                        "to the containing directory";
+        fi
+}
+
 function configure_debug {
         [[ ! -z "$DEBUG" ]] && set -x
 }
 
-function create_install_dir {
+function maybe_symlink_to_install_dir {
         install_dir="$HOME/.dot-file-collection"
-        abort_if_file_exists_not_dir "$install_dir"
-        mkdir -p "$install_dir";
+        bash_source_length="${#BASH_SOURCE[@]}"
+        cur_dir="$( cd -P "$( dirname \
+                "${BASH_SOURCE[${bash_source_length} - 1]}" )" && pwd )"
+        abort_if_install_dir_path_invalid "$install_dir" "$cur_dir"
+        if [[ "$cur_dir" != "$install_dir" ]]; then
+                ln -sfh "$cur_dir" "$install_dir";
+        fi
 }
 
 function set_bash_options {
@@ -84,8 +103,7 @@ function init {
 
         set_bash_options
 
-        #This line is suspect
-        create_install_dir
+        maybe_symlink_to_install_dir
         create_symlinks
 
         sym_link_os_specific

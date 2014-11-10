@@ -3,6 +3,7 @@ SYS_SPECIFIC=~/.sys_specific
 RCFILE=~/.bashrc
 ALIASFILE=~/.bash_alias
 TERMCAPFILE=~/.LESS_TERMCAP
+INSTALL_SPECIFIC=~/.install_specific
 
 if [[ -f "$SYS_SPECIFIC" ]]
 then
@@ -21,4 +22,9 @@ then
   then
     . "$ALIASFILE" # For aliases
   fi
+fi
+
+if [[ -f "$INSTALL_SPECIFIC" ]]
+then
+  . "$INSTALL_SPECIFIC" # To get the install specific configuration
 fi

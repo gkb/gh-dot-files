@@ -5,9 +5,6 @@ let s:dot_file_dir = $HOME . "/.dot-file-collection/"
 let mapleader = ","
 set timeout timeoutlen=1000 ttimeoutlen=100
 
-map <C-a> :call Comment()<CR>
-map <C-m> :call Uncomment()<CR>
-
 " Press F4 to toggle highlighting on/off, and show current value.
 " See http://vim.wikia.com/wiki/VimTip14
 set hlsearch incsearch
@@ -44,52 +41,53 @@ highlight ColorColumn ctermbg=233
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " My Bundles here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-Bundle 'Valloric/MatchTagAlways'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'tpope/vim-rails.git'
+Plugin 'Valloric/MatchTagAlways'
 " This is causing vim to seg fault
 " Bundle 'Valloric/YouCompleteMe'
-Bundle 'bling/vim-airline'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-git'
-Bundle 'godlygeek/tabular'
-Bundle 'majutsushi/tagbar'
-Bundle 'drmingdrmer/xptemplate'
-Bundle 'scrooloose/syntastic'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'sjl/vitality.vim'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'ktvoelker/sbt-vim'
-Bundle 'tfnico/vim-gradle'
+Plugin 'bling/vim-airline'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-git'
+Plugin 'godlygeek/tabular'
+Plugin 'majutsushi/tagbar'
+Plugin 'drmingdrmer/xptemplate'
+Plugin 'scrooloose/syntastic'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'sjl/vitality.vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'ktvoelker/sbt-vim'
+Plugin 'tfnico/vim-gradle'
+Plugin 'henrik/vim-indexed-search'
+Plugin 'danro/rename.vim'
+Plugin 'wesQ3/vim-windowswap'
+Plugin 'h13ronim/vim-comments'
+Plugin 'tpope/vim-commentary'
+Plugin 'mileszs/ack.vim'
 
 " vim-scripts repos
-Bundle 'L9'
-Bundle "bufexplorer.zip"
-Bundle "yavdb"
-Bundle "Command-T"
+Plugin 'L9'
+Plugin 'yavdb'
+Plugin 'Command-T'
 
-" local plugins
-let s:vim_plugin_dir = s:dot_file_dir . "vim/local_plugins/"
-let s:local_plugin_names = [ "VimComments", "Rename", "IndexedSearch",
-  \"ftplugin_files", "matchit", "window_swap", "syntax_files" ]
-for lp_name in s:local_plugin_names
-  execute "Bundle " . "'file://" . s:vim_plugin_dir . lp_name . "'"
-endfor
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " Getting vim-airline settings
 execute "source " . s:dot_file_dir . "vim/airline_settings"
