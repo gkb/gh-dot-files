@@ -16,7 +16,7 @@ function load_tpm_plugins {
     # when it can't find a session where it can display a message
     local hacky_tmux_session_name="test"
     local shell_command="${tpm_install_dir}/${install_script_relpath}"
-    tmux new-session -s "${hacky_tmux_session_name}" -d "${shell_command}"
+    TMUX= tmux new-session -s "${hacky_tmux_session_name}" -d "${shell_command}"
     tmux kill-session -t "${hacky_tmux_session_name}"
 }
 
