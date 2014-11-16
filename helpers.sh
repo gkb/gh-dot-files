@@ -99,14 +99,22 @@ function install_bin_files {
 }
 
 function init {
+        echo "Checking DEBUG settings"
         configure_debug
 
+        echo "Setting Bash options"
         set_bash_options
 
+        echo "Setting up symlinks to dot files"
         maybe_symlink_to_install_dir
         create_symlinks
 
+        echo "Setting up os-specific symlinks"
         sym_link_os_specific
+
+        echo "Running application specific install scripts"
         run_install_scripts
+
+        echo "Installing bin files"
         install_bin_files
 }

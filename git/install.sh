@@ -11,5 +11,6 @@ function create_global_gitignore() {
         ln -sf "$cur_dir/gitignore/ignore" "$git_config_dir"
 }
 
+echo "Doing git specific setup"
 create_git_template
 create_global_gitignore

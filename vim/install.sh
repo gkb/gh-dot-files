@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Doing vim specific setup"
+
 [[ ! -z "$DEBUG" ]] && set -x
 
 function die {
@@ -25,7 +27,7 @@ mkdir -p "$vundle_install_dir"
 # Don't overwrite an existing checkout of Vundle
 if [[ ! -d "${vundle_install_dir}/Vundle.vim" ]]; then
         git clone "https://github.com/gmarik/Vundle.vim" \
-                "${vundle_install_dir}/Vundle.vim";
+                "${vundle_install_dir}/Vundle.vim" &>/dev/null
 fi
 
 # Copy color schemes

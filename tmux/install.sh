@@ -6,7 +6,7 @@ tpm_git_url="https://github.com/tmux-plugins/tpm"
 function get_tpm {
     mkdir -p "${tpm_plugin_dir}"
     if [[ ! -d "${tpm_install_dir}" ]]; then
-        git clone "${tpm_git_url}" "$tpm_install_dir"
+        git clone "${tpm_git_url}" "$tpm_install_dir" &>/dev/null
     fi
 }
 
@@ -20,5 +20,10 @@ function load_tpm_plugins {
     tmux kill-session -t "${hacky_tmux_session_name}"
 }
 
-get_tpm
-load_tpm_plugins
+function init {
+    echo "Doing tmux specific setup"
+    get_tpm
+    load_tpm_plugins
+}
+
+init
