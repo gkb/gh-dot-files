@@ -26,7 +26,7 @@ function abort_if_install_dir_path_invalid {
 }
 
 function configure_debug {
-        [[ ! -z "$DEBUG" ]] && set -x
+        [[ -n "$DEBUG" ]] && set -x
 }
 
 function maybe_symlink_to_install_dir {
