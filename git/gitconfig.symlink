@@ -20,6 +20,7 @@
 	track = checkout -t
 	# Group grep output
 	g = "grep --break --heading --line-number"
+	au = update-index --assume-unchanged
 [apply]
 	whitespace = warn
 [color]
