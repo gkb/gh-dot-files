@@ -43,3 +43,5 @@
 [grep]
 	extendRegexp = true
 	lineNumber = true
+[core]
+	editor = vim
