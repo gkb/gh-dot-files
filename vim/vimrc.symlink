@@ -151,3 +151,6 @@ set tags=tags;/
 
 " Scala related configuration
 let g:scala_sort_across_groups=1
+
+" Nerdtree related configuration
+let g:NERDTreeShowHidden=1
