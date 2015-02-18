@@ -81,6 +81,7 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'h13ronim/vim-comments'
 Plugin 'tpope/vim-commentary'
 Plugin 'mileszs/ack.vim'
+Plugin 'rodjek/vim-puppet'
 
 " vim-scripts repos
 Plugin 'L9'
