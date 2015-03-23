@@ -82,6 +82,8 @@ Plugin 'h13ronim/vim-comments'
 Plugin 'tpope/vim-commentary'
 Plugin 'mileszs/ack.vim'
 Plugin 'rodjek/vim-puppet'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kien/rainbow_parentheses.vim'
 
 " vim-scripts repos
 Plugin 'L9'
