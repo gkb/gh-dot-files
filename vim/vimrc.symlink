@@ -164,3 +164,6 @@ let g:ycm_global_ycm_extra_conf = $HOME . "/.ycm_extra_conf.py"
 " Ycm go to declaration
 nnoremap <Leader>q
   \ :YcmCompleter GoToDeclaration<CR>
+
+" Email for xptemplate
+g:xptemplate_vars="$email=gajukbhat@gmail.com"
