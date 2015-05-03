@@ -166,4 +166,4 @@ nnoremap <Leader>q
   \ :YcmCompleter GoToDeclaration<CR>
 
 " Email for xptemplate
-g:xptemplate_vars="$email=gajukbhat@gmail.com"
+let g:xptemplate_vars="$email=gajukbhat@gmail.com"
