@@ -167,3 +167,6 @@ nnoremap <Leader>q
 
 " Email for xptemplate
 let g:xptemplate_vars="$email=gajukbhat@gmail.com"
+
+" ctrlp settings
+let g:ctrlp_show_hidden = 1
