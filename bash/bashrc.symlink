@@ -66,7 +66,7 @@ then
   # Show the number of currently running jobs
   PS1="${PS1}\[\e[1;37m\]Jobs-\j:\[\e[m\]"
   # Show git status on the prompt
-  PS1="${PS1}$(__git_ps1 ' (%s)')"
+  PS1="${PS1}\$(__git_ps1 ' (%s)')"
   # Show the working directory truncated to a maximum of
   # two trailing directories
   PROMPT_DIRTRIM=1
