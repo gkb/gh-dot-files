@@ -1,4 +1,4 @@
 #!/bin/bash
-source ./helpers.sh
+source "$(dirname $0)"/helpers.sh
 
 init
