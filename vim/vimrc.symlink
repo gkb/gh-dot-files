@@ -84,6 +84,7 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'jlanzarotta/bufexplorer'
 
 " vim-scripts repos
 Plugin 'L9'
