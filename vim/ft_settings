@@ -53,6 +53,8 @@ if has("autocmd")
 
   autocmd FileType scss.css setlocal ts=2 sts=2 sw=2 expandtab
 
+  autocmd FileType proto setlocal ts=2 sts=2 sw=2 expandtab
+
   " Load vimrc on save
   autocmd! bufwritepost .vimrc source %
 endif

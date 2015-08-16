@@ -131,7 +131,7 @@ set tabpagemax=15
 execute "source " . s:dot_file_dir . "vim/latex_shortcuts"
 
 " Set up par options
-set formatprg=par\ -w50
+set formatprg=par\ -w80
 
 " Getting jedi configuration
 execute "source " . s:dot_file_dir . "vim/jedi_config"
