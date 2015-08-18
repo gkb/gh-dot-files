@@ -45,3 +45,6 @@
 	lineNumber = true
 [core]
 	editor = vim
+[user]
+	email = gajukbhat@google.com
+	name = Gaju Bhat
