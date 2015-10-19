@@ -10,6 +10,7 @@ Glug youcompleteme-google
 Glug blaze plugin[mappings]='<Leader>B'
 Glug blazedeps
 Glug refactorer
+Glug codefmt-google
 Glug piper plugin[mappings]='<Leader>P'
 
 " Explicitly set the Leader and set timeouts
