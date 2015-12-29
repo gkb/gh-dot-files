@@ -35,8 +35,9 @@ if has("autocmd")
   " ts=4
   autocmd FileType c setlocal ts=4 sts=4 sw=4 expandtab
 
-  " Maintain similar indentation with C++ files
   autocmd FileType cpp setlocal ts=2 sts=2 sw=2 expandtab
+
+  autocmd FileType python setlocal ts=2 sts=2 sw=2 expandtab
 
   " Use space with text files. Makes alignment much easier
   autocmd FileType txt setlocal ts=2 sts=2 sw=2 expandtab
