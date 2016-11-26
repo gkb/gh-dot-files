@@ -3,16 +3,6 @@ let s:dot_file_dir = $HOME . "/.dot-file-collection/"
 
 set nocompatible               " be iMproved
 
-" Google specific
-source /usr/share/vim/google/google.vim
-source /usr/share/vim/google/gtags.vim
-Glug youcompleteme-google
-Glug blaze plugin[mappings]='<Leader>B'
-Glug blazedeps
-Glug refactorer
-Glug codefmt-google
-Glug piper plugin[mappings]='<Leader>P'
-
 " Explicitly set the Leader and set timeouts
 let mapleader = ","
 set timeout timeoutlen=1000 ttimeoutlen=100

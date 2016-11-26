@@ -105,10 +105,6 @@ set -g status-left-length 40
 set -g status-left "#[fg=green]Session: #S #[fg=yellow]Win: #I #[fg=cyan]Pane: #P"
 # END:statusleft
 
-#START:utf8
-set -g status-utf8 on
-#END:utf8
-
 # Status line right side
 # 15% | 28 Nov 18:15
 # START: statusright
